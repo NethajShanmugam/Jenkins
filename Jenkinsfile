@@ -1,6 +1,9 @@
 pipeline {
     agent any 
 
+    tools {
+  maven 'Maven_3_9_5'
+}
     stages {
         stage ('complile stage') {
 
