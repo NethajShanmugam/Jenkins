@@ -1,33 +1,22 @@
 pipeline {
-    agent any 
-
-    stages {
-        stage ('complile stage') {
-
+    agent any
+    stages{
+        stage ('Hello') {
             steps {
-                withMaven(maven : 'Maven_3_8_4') {
-                    sh 'mvn clean compile'
-                }
+                echo 'Hello World'
             }
         }
 
-        stage ('test stage') {
-
+        stage ('Welcome') {
             steps {
-                withMaven(maven : 'Maven_3_8_4') {
-                    sh 'mvn test'
-                }
+                echo 'Welocome to organization'
             }
         }
 
-        stage ('Deploy stage') {
-
+        stage ('Introduction') {
             steps {
-                withMaven(maven : 'Maven_3_8_4') {
-                    sh 'mvn deploy'
-                }
+                echo 'Introduction to the company'
             }
         }
-
     }
 }
